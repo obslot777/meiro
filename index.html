@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>迷路ゲーム</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker 登録完了"))
+        .catch(e => console.error("SW登録失敗", e));
+    }
+  </script>
 </head>
 <body>
   <div id="gameArea">
