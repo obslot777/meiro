@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>迷路ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gameArea">
+    <div id="maze">
+      <div id="start">スタート</div>
+      <div id="goal">ゴール</div>
+      <div id="player"></div>
+    </div>
+    <div id="message"></div>
+    <button id="retryButton" style="display:none;">もういっかい！</button>
+  </div>
+
+  <audio id="bgm" src="bgm.mp3" loop></audio>
+  <audio id="goalSound" src="goal.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

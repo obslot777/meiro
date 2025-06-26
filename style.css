@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background-color: #a0b8c8;
+  font-family: sans-serif;
+}
+
+#gameArea {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#maze {
+  position: relative;
+  width: 80vw;
+  height: 80vw;
+  background-color: #d0e0f0;
+  border: 10px solid #50728c;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+#start, #goal {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+#start {
+  top: 5%;
+  left: 5%;
+  background-color: #5b9aa0;
+}
+
+#goal {
+  bottom: 5%;
+  right: 5%;
+  background-color: #87c5d0;
+}
+
+#player {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  background-color: #f4d35e;
+  border-radius: 50%;
+  top: 5%;
+  left: 5%;
+  transition: transform 0.5s ease;
+}
+
+#message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: red;
+  background: rgba(255,255,255,0.8);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: none;  /* 初期は非表示 */
+  z-index: 1000;
+  user-select: none;
+  pointer-events: none;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.wall {
+  position: absolute;
+  background-color: #50728c;
+  border-radius: 5px;
+}
+
+@keyframes rotateWall {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.wall.rotate {
+  animation: rotateWall 10s linear infinite; /* ←ここ10秒に変更 */
+}
+
+#retryButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  padding: 20px 40px;
+  background-color: #f4d35e;
+  border: none;
+  border-radius: 15px;
+  color: #333;
+  display: none;
+  z-index: 10;
+}
